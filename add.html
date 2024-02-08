@@ -10,6 +10,7 @@
     <input id="duckId"/>
     <label>Type:</label>
     <input id="duckType" />
+    <input type="file" id="duckImage" accept="image/*"/>
     <button onclick="addTheDuck()">Add the duck</button>
 
     <script>
@@ -22,7 +23,7 @@
            alert("You entered: " + JSON.stringify(duck));
 
            let duckImageNode = document.getElementById("duckImage");
-           alert("The image: " + ", size = " + duckImageNode.files[0].size);
+           alert("The image: " + duckImageNode.files[0].name + ", size = " + duckImageNode.files[0].size);
         }
     </script>
 
